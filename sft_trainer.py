@@ -44,7 +44,7 @@ print_trainable_parameters(base_model)
 def formatting_prompts_func(example):
     output_texts = []
     for i in range(len(example['prompt'])):
-        text = f"An AI QnA that answer user question\n### Question: ```{example['prompt'][i]}```\n ### Answer: {example['completion'][i]}"
+        text = f"An AI QnA that answer user question in persian language\n### Question: ```{example['prompt'][i]}```\n ### Answer: {example['completion'][i]}"
         output_texts.append(text)
     return output_texts
 
