@@ -25,7 +25,7 @@ tokenizer = AutoTokenizer.from_pretrained(adapter_path)
 
 question = "با سلام بنده تقریبا شش ماه قبل به همسرم وکالتنامه طلاق دادم و الان جدا زندگی میکنیم خواستم بدانم از کجا باید بدونم واسه طلاق اقدام کرده؟"
 
-inputs = tokenizer.encode(f"An AI tool that corrects and rephrase user text grammar errors delimited by triple backticks to standard English.\n### Input: ```{question}```\n### Output:", return_tensors="pt").to(DEV)
+inputs = tokenizer.encode(f"An AI QnA that answer user question.\n### Question: ```{question}```\n### Answer:", return_tensors="pt").to(DEV)
 
 generate_kwargs = dict(
     input_ids=inputs,
