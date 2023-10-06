@@ -23,7 +23,7 @@ model = AutoPeftModelForCausalLM.from_pretrained(
 tokenizer = AutoTokenizer.from_pretrained(adapter_path)
 # tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-question = "با سلام بنده تقریبا شش ماه قبل به همسرم وکالتنامه طلاق دادم و الان جدا زندگی میکنیم خواستم بدانم از کجا باید بدونم واسه طلاق اقدام کرده؟"
+question = "شرکت فولاد مبارکه در کجا واقع شده است"
 
 inputs = tokenizer.encode(f"An AI QnA that answer user question in persian language.\n### Question: ```{question}```\n### Answer:", return_tensors="pt").to(DEV)
 
