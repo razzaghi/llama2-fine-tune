@@ -10,7 +10,7 @@ torch.cuda.empty_cache()
 adapter_dir = './results/final_checkpoint'
 output_dir = './merged_peft'
 
-model = AutoPeftModelForCausalLM.from_pretrained(adapter_dir, device_map="cpu", torch_dtype=torch.bfloat16)
+model = AutoPeftModelForCausalLM.from_pretrained(adapter_dir, device_map="cuda", torch_dtype=torch.bfloat16)
 model = model.merge_and_unload()
 
 tokenizer = AutoTokenizer.from_pretrained(adapter_dir)
