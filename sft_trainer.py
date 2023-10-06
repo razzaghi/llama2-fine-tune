@@ -10,7 +10,7 @@ from utils import find_all_linear_names, print_trainable_parameters
 output_dir = "./results"
 model_name = "NousResearch/Llama-2-7b-hf"
 
-dataset = load_dataset("json", data_files="data/generic.json", split="train")
+dataset = load_dataset("json", data_files="data/generic-short.json", split="train")
 
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
